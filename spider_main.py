@@ -34,7 +34,7 @@ class SpiderMain(object):
                 # 收集数据
                 self.outputer.collect_data(new_data)
 
-                if count == 1000:
+                if count == 5:
                     break
                 count+=1
             except Expect as error:
@@ -44,6 +44,6 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__ == "__main__":
-    root_url = 'http://baike.baidu.com/view/21087.html'
+    root_url = 'https://baike.baidu.com/item/team/1434925'
     obj_spider = SpiderMain()
     obj_spider.craw(root_url) # 启动爬虫

@@ -1,0 +1,26 @@
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+html = urlopen(url)
+html.read  return memory address
+
+bsObj = BeautifulSoup(html.read()
+
+bsObj.findALL("parameter")
+bsObj.find("div")
+
+<span class="green"></span>
+
+nameList = bsObj.findAll("span", {"class":"green"})
+for name in nameList:
+    print(name.get_text())
+
+name.get_text() return all the proper nouns in the text
+bsObj.findAll(tagName, tagAttributes)
+name.get_text() in order to separate the content from the tags
+
+findAll(tag, attributes, recursive, text, limit, keywords)
+find(tag, attributes, recursive, text, keywords)
+    .findAll("span", {"class":"green", "class":"red"})
+    .findAll({"h1","h2","h3","h4","h5","h6"})
